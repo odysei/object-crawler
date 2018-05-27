@@ -1,0 +1,24 @@
+# the binary to run with arguments
+binary: "nm -D"
+
+verbosity: 1
+
+investigate:
+    - object: "local/lib/my-dynamic-lib.so"
+
+lib_pool:
+    - libs:
+        path: "local/lib/"
+        files: [
+            "lib-to-check1.so",
+            "lib-to-check2.so",
+            "lib-to-check3.so",
+            # saved for later "lib-to-check4.so",
+             "lib-to-check5.so",
+        ]
+    - libs:
+        path: "/local/more/lib/"
+        files: [
+            "lib-to-check1.so",
+            "lib-to-check2.so",
+                ]
